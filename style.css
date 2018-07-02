@@ -1,0 +1,96 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.headerlogo img[src="images/logo.jpg"] {
+  height: 80px;
+  width: 80px;
+  float: left;
+}
+
+#headername {
+  margin-left: 35%;
+  font-weight: bolder;
+  font-size: 60px;
+  color: white;
+}
+
+.searchbox {
+  float: right;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  color: white;
+}
+
+#robotext1, #robotext2, #robotext3 {
+  float: left;
+  margin-left: 100px;
+  margin-right: 50px;
+}
+
+footer {
+  text-align: center;
+  color: white;
+}
+
+fieldset {
+  background-color: #333;
+  font-family: Verdana;
+  border-style: none;
+}
+
+label {
+  color: rgb(241, 0, 0); 
+}
+
+legend {
+  color: rgb(241, 0, 0);
+  border-style: none;
+}
+
+button {
+  color: black;
+}
+
+.introText {
+  column-count: 2;
+  column-gap: 25px;
+}
+
+.backgroundIMG { 
+  background-color: white;
+}
+
+.wordColor {
+  color: white;
+}
+
+
+
+
+
+
+/*
+#locName:focus, input:focus, textarea:focus {
+  border: 3px solid rgb(18, 1, 255);
+}
+
+fieldset img:hover {
+  border: 3px solid rgb(18, 1, 255);
+}
+
+
+input:hover{
+  border: 3px solid rgb(18, 1, 255);
+}*/
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mr Robot!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css"></head>
+  <body>
+    <header>
+      <div>
+          <a class="headerlogo" href="index.html">
+              <img src="images/logo.jpg" />
+          </a>
+          <span id="headername">Mr. Robot</span>
+          <input type="search" class="searchbox" id="searchInput" placeholder="Search our store" />
+      </div>
+
+      <nav class="navbar navbar-inverse navbar-default">
+          <div class="container-fluid">
+              <a href="#" class="navbar-brand" >Robot Store</a>
+              <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <div class="collapse navbar-collapse navHeaderCollapse">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a class="navlink active" href="index.html">Home</a></li>
+                      <li><a class="navlink" href="robots.html">Robots</a></li>
+                      <li><a class="navlink" href="hardware.html">Hardware</a></li>
+                      <li><a class="navlink" href="contact.html">Contact</a></li>
+                      <li><a class="navlink" href="about.html">About</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
+
+<fieldset>
+<legend>Mr. Robot's Top Robot Models</legend>
+
+<ul class="roboList">
+
+<li >
+  <article id="robotext1">
+  <h4>
+  <label for="imgrobo1">  Name:</label>R.E.T.</h4>
+  <a href="images/roboDog.png"><img id="imgrobo1" name="imgrobo1" alt="robo1"></a>
+
+  <h5><strong>Description:</strong> <br>This was our first robot.<br>
+   He was modeled after the famous movie character E.T.<br></h5>
+</article>
+</li>
+
+<li>
+  <article id="robotext2">
+<h4>
+<label for="imgrobo2">  Name:</label>
+   Butler.Bot</h4>
+<a href="images/robot2.png"><img id="imgrobo2" name="imgrobo2" src="images/robot2.png" width=200 height=200 alt="robo1"></a>
+
+<h5><strong>Description:</strong> <br>This was our second robot.<br>
+ He makes a mean martini!</h5>
+</article>
+</li>
+<li>
+  <article id="robotext3">
+  <h4>
+  <label for="imgrobo3">  Name:</label>
+     Mega Man</h4>
+  <a href="images/robot3.png"><img id="imgrobo3" name="imgrobo3" src="images/robot3.png" width=200 height=200 alt="robo1"></a>
+
+  <h5><strong>Description:</strong> <br>This is our newest model.<br>
+   This one will follow you around the house.</h5>
+
+</article>
+
+</li>
+</ul>
+</fieldset>
+
+<footer>
+  <p>Our address is <address>1011 Crater Ave, Moon City: THE MOON</address></p>
+  <p class="textcontent">All site contents is copyright <a class="mainlink" href="http://www.mrrobot.com">Mr Robot!</a></p>
+  <p class="smalltext">This page was generated on <time>09:25:04.123</time>.</p>
+</footer>
+
+<template id="producttemplate">
+<article>
+  <label id="lblName" for="productimage">Name:</label>
+  <img id="pimage" name="productimage" class="productarticlelargeimage" src="" alt="product image">
+  <article name="productdescription" class="productarticledescription" >
+
+  </article>
+  </article>
+</template>
+
+<script>
+  //var robo = document.querySelector('#robo1').createShadowRoot();
+  /*Step1*/
+  let prdTemplate = document.querySelector('#producttemplate');
+  /*Step2*/
+  let clone = document.importNode(prdTemplate.content, true);
+  /*Step3*/
+
+  clone.querySelector('#pimage').src = 'images/roboDog.png';
+  //clone.querySelector('#lblName').textContent = 'R.E.T';
+
+ /*Step4*/
+  //robo.appendChild(clone);
+  let userTemplate = document.querySelector('#user');
+  let userClone = document.importNode(userTemplate.content, true);
+  document.body.appendChild(userClone);
+    let addressTemplate = document.querySelector('#address');
+    let addressClone = document.importNode(addressTemplate.content, true);
+  document.body.appendChild(addressClone);
+</script>
+<script
+src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="JSinput.js"></script>
+<script src="JSimg.js"></script>
+<script src="JShardware.js"></script>
+</body>
+</html>
